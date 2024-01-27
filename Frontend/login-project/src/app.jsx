@@ -1,19 +1,30 @@
-import React from 'react';
-import Login from './pages/Login';
+import React, { useState } from 'react';
+import Auth from './pages/Auth'
+import { BrowserRouter } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import './App.css'
 
-import './app.css';
+
+const App = () => {
+    const [authType, setAuthType] = useState('login');
+    return (
+        <div>
+
+            <BrowserRouter>
+                <Header title='Login Reactivo' />
+                {authType === 'login' ? <Auth type="login" /> : <Auth type="register" />}
+                <div className="routes">
+                <button onClick={() => setAuthType('login')}>Login</button>
+                <button onClick={() => setAuthType('register')}>Registrar</button>
+                </div>
+                <Footer />
+            </BrowserRouter>
 
 
-export function App() {
 
+        </div>
+    );
+};
 
-  return (
-
-      <div>
-        <h1>Página de Login</h1>
-        <Login/>
-     </div>
-
-   
-  )
-}
+export default App;

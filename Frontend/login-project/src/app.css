@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.routes {
+    display: flex;
+    margin-left: 50%;
+}
+
+button {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+    margin-right: 5%;
+    border: 2px outset rebeccapurple;
+    background: rgb(162, 127, 196);
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    justify-content: flex-end;
+    background-color: rgb(62, 50, 73);
+}
+
+button:hover {
+    background-color: white;
+    color: #000;
+}
