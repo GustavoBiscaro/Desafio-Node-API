@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Auth.css'
+import Register from './Register';
 
 const Auth = ({ type }) => {
     const [email, setEmail] = useState('');
@@ -20,16 +21,16 @@ const Auth = ({ type }) => {
                 setSuccessMessage('Usuário logado com sucesso!');
                 setErrorMessage('');
             } else if (type === 'register') {
+
                 if (password !== confirmPassword) {
                     setErrorMessage('As senhas não coincidem.');
                     return;
                 }
 
                 const response = await axios.post('http://localhost:3000/auth/register', {
-                    name: 'Nome do Usuário', 
+                    name: '', 
                     email: email,
                     password: password,
-                    confirmPassword: confirmPassword,
                 });
 
                 setSuccessMessage('Usuário registrado com sucesso!');
@@ -52,6 +53,10 @@ const Auth = ({ type }) => {
     return (
         <div>
             <h2 className='routeHeader'>{type === 'login' ? 'Login' : 'Cadastro'}</h2>
+            
+            {
+                type === 'register' && <Register/>
+            }
             <form>
                 <div className='fieldsDiv'>
                     <label>Email</label>
@@ -62,20 +67,10 @@ const Auth = ({ type }) => {
                     <label>Senha</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
-
-                {type === 'register' && (
-                    <div className='fieldsDiv'>
-                        <label>Confirme a Senha:</label>
-                        <input
-                            type="password"
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                        />
-                    </div>
-                )}
+                 
                 <div className='actionButton'>
                 <button type="button" onClick={handleAuth}>
-                    {type === 'login' ? 'Login' : 'Cadastrar'}
+                   Login
                 </button>
 
                 <button type="button" onClick={buttonClear}>
