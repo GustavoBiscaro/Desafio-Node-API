@@ -20,10 +20,13 @@ const RegisterForm = () => {
 
     const handleRegister = async () => {
         try {
+            console.log('Sending data:', userData);
             const response = await axios.post('http://localhost:3000/auth/register', userData);
+            console.log('Server response:', response.data);
             setSuccessMessage('Usuário registrado com sucesso!');
             setErrorMessage('');
         } catch (error) {
+            console.error('Registration error:', error.response.data);
             if (error.response && error.response.data && error.response.data.msg) {
                 setErrorMessage(error.response.data.msg);
             } else {
@@ -57,9 +60,9 @@ const RegisterForm = () => {
                 </div>
 
                 <div className='actionButton'>
-                <button type="button" onClick={handleRegister}>
-                    Cadastrar
-                </button>
+                    <button type="button" onClick={handleRegister}>
+                        Cadastrar
+                    </button>
                 </div>
             </form>
 

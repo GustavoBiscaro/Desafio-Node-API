@@ -56,7 +56,7 @@ function checkToken(req, res, next) {
 // Registro do user
 app.post('/auth/register', async (req, res) => {
 
-    const { name, email, password, confirmpassword } = req.body
+    const { name, email, password, confirmpassword } = req.body;
 
     // Validando
     if (!name) {

@@ -4,18 +4,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.routeHeader {
-    display: flex;
-    margin: 20px;
-    padding: 15px;
-    justify-content: center;
-    background-color: rgb(164, 139, 187);
-    width: 100%;
-    border-radius: 25px;
-    color: rgb(62, 50, 73);
-    border: 2px solid rgb(62, 50, 73);
 
-}
 
 form {
     display: flex;
