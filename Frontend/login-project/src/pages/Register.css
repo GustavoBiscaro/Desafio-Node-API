@@ -59,3 +59,33 @@ form .fieldsDiv {
     font-weight: bold;
     color: #000;
 }
+
+.errorMsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-left: 20%;
+    margin-right: 70%;
+    margin-bottom: 30px;
+    border: 4px outset red;
+    background-color: white;
+    font-weight: bolder;
+    color: red;
+}
+
+.successMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-left: 20%;
+    margin-right: 70%;
+    margin-bottom: 30px;
+    border: 4px groove rgb(126, 16, 230);
+    background-color: rgb(164, 139, 187);
+    font-weight: bolder;
+    color: rgb(22, 18, 252);
+}

@@ -13,7 +13,7 @@ const Auth = ({ type }) => {
     const handleAuth = async () => {
         try {
             if (type === 'login') {
-             
+
                 const response = await axios.post('http://localhost:3000/auth/login', {
                     email: email,
                     password: password,
@@ -28,7 +28,7 @@ const Auth = ({ type }) => {
                 }
 
                 const response = await axios.post('http://localhost:3000/auth/register', {
-                    name: '', 
+                    name: '',
                     email: email,
                     password: password,
                 });
@@ -53,9 +53,9 @@ const Auth = ({ type }) => {
     return (
         <div>
             <h2 className='routeHeader'>{type === 'login' ? 'Login' : 'Cadastro'}</h2>
-            
+
             {
-                type === 'register' && <Register/>
+                type === 'register' && <Register />
             }
             <form>
                 <div className='fieldsDiv'>
@@ -67,19 +67,19 @@ const Auth = ({ type }) => {
                     <label>Senha</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                 
-                <div className='actionButton'>
-                <button type="button" onClick={handleAuth}>
-                   Login
-                </button>
 
-                <button type="button" onClick={buttonClear}>
-                    Limpar
-                </button>
+                <div className='actionButton'>
+                    <button type="button" onClick={handleAuth}>
+                        Login
+                    </button>
+
+                    <button type="button" onClick={buttonClear}>
+                        Limpar
+                    </button>
                 </div>
 
-                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-                {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+                {errorMessage && <p className='errorMsg'>{errorMessage}</p>}
+                {successMessage && <p className='successMessage'>{successMessage}</p>}
             </form>
         </div>
     );

@@ -21,7 +21,7 @@ const RegisterForm = () => {
     const handleRegister = async () => {
         try {
             console.log('Sending data:', userData);
-            const response = await axios.post('http://localhost:3000/auth/register', userData);
+            const response = await axios.post('http://localhost:3000/auth/register', { ...userData, confirmpassword: userData.confirmPassword });
             console.log('Server response:', response.data);
             setSuccessMessage('Usuário registrado com sucesso!');
             setErrorMessage('');
@@ -66,8 +66,8 @@ const RegisterForm = () => {
                 </div>
             </form>
 
-            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+            {errorMessage && <p className='errorMsg'>{errorMessage}</p>}
+            {successMessage && <p className='successMessage'>{successMessage}</p>}
         </div>
     );
 };
