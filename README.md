@@ -22,6 +22,10 @@ Com o terminal integrado, selecionar a pasta  **login-project** com o "cd" e uti
 
 É importante verificar a instalação de todos pacotes necessários.
 
+<img src="./Frontend/login-project/public/Como executar o projeto.gif" alt="how-execute">
+
+
+
 # TECNOLOGIAS UTILIZADAS
 
 ## Node.Js
@@ -49,5 +53,7 @@ Para instalá-lo basta digitar **npm create vite@latest**
 
 ## Login Reactivo
 <img src="./Frontend/login-project/public/login.gif" alt="login-reactivo">
+
+
 
 
