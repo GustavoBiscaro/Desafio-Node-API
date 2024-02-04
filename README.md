@@ -44,12 +44,18 @@ O React é um framework também baseado em javascript (ai você compreende a exp
 <img src="https://pt.vitejs.dev/logo.svg" alt="vite" width="150">
 <br>
 Vite (palavra de origem francesa que significa "rápido"), é uma ferramenta de construção de projetos de frontend que se destina a oferecer uma experiência de desenvolvimento mais rápida e leve, para diversos tipos de projeto web. Entre os modelos de projeto suportadas estão: 
-- React
-- Vue
-- Solid
-e etc.
+ :books: React
+ :books: Vue 
+ :books: Solid 
+ :books: etc
+
 
 Para instalá-lo basta digitar **npm create vite@latest**
+
+## MongoDB
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="mongo" width="150">
+<br>
+É um banco de dados de documentos com a escalabilidade e flexibilidade que você deseja junto com a consulta e indexação que você precisa.
 
 ## Login Reactivo
 <img src="./Frontend/login-project/public/login.gif" alt="login-reactivo">
